@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/wangbin/jiebago"
+	"github.com/masiqi/jiebago"
 )
 
 // Segment represents a word with weight.
@@ -61,7 +61,7 @@ func (t *TagExtracter) LoadDictionary(fileName string) error {
 // LoadIdf reads the given file and create a new Idf dictionary.
 func (t *TagExtracter) LoadIdf(fileName string) error {
 	t.idf = NewIdf()
-	return t.idf.loadDictionary(fileName)
+	return t.idf.LoadDictionary(fileName)
 }
 
 // LoadStopWords reads the given file and create a new StopWord dictionary.

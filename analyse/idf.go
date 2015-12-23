@@ -4,7 +4,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/wangbin/jiebago/dictionary"
+	"github.com/masiqi/jiebago/dictionary"
 )
 
 // Idf represents a thread-safe dictionary for all words with their
@@ -38,7 +38,7 @@ func (i *Idf) Load(ch <-chan dictionary.Token) {
 	i.Unlock()
 }
 
-func (i *Idf) loadDictionary(fileName string) error {
+func (i *Idf) LoadDictionary(fileName string) error {
 	return dictionary.LoadDictionary(i, fileName)
 }
 
